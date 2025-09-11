@@ -45,6 +45,7 @@ body.site {
   padding-inline: 12px;
 }
 
+/* Skip link accesible */
 .skip-link {
   position: absolute;
   left: -9999px;
@@ -65,6 +66,7 @@ body.site {
   margin: 6px;
 }
 
+/* Header */
 .title-band {
   width: 100%;
   background: var(--title-band);
@@ -95,6 +97,7 @@ body.site {
   font-size: .85em;
 }
 
+/* NAV: objetivos táctiles ≥48px + separación ≥8px */
 .site-nav {
   background: var(--nav-band);
   color: var(--text-inv);
@@ -103,20 +106,34 @@ body.site {
 .menu {
   list-style: none;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  gap: 10px;
-  padding: 0;
+  gap: 12px;
+  /* separación entre targets */
+  padding: 8px;
+  /* colchón exterior */
   margin: 0;
   min-height: 48px;
 }
+
+.menu li {
+  display: flex;
+}
+
+/* permite que el <a> crezca completo */
 
 .menu a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   min-height: 48px;
-  padding: 10px 16px;
+  /* alto mínimo tap target */
+  min-width: 48px;
+  /* ancho mínimo tap target */
+  padding: 12px 16px;
+  /* área clicable mayor */
+  margin: 0;
+  /* sin solaparse con gap */
   border-radius: 8px;
   color: var(--text-inv);
   background-color: transparent;
@@ -133,6 +150,7 @@ body.site {
   padding-block: 12px;
 }
 
+/* Layout principal */
 .grid-two-cols {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -153,6 +171,7 @@ body.site {
   opacity: .95;
 }
 
+/* Cards */
 .card {
   background: var(--panel-background);
   color: var(--text);
@@ -173,6 +192,7 @@ body.site {
   font-size: clamp(16px, 1.6vw, 20px);
 }
 
+/* About */
 .about-row {
   display: grid;
   grid-template-columns: 1fr var(--about-photo-w);
@@ -187,6 +207,7 @@ body.site {
   line-height: 1.6;
 }
 
+/* País */
 .country-title {
   margin: 6px 6px 8px;
   text-align: center;
@@ -215,6 +236,7 @@ body.site {
   line-height: 1.6;
 }
 
+/* Foto */
 .portrait {
   margin: 0;
   display: flex;
@@ -229,6 +251,7 @@ body.site {
   object-fit: cover;
 }
 
+/* Bandera */
 .flag {
   margin: 0;
   display: flex;
@@ -252,6 +275,7 @@ body.site {
   font-style: italic;
 }
 
+/* Resources: tap targets accesibles en la lista */
 .card--resources {
   display: grid;
   grid-template-rows: auto 1fr;
@@ -266,9 +290,27 @@ body.site {
 
 .card--resources .links {
   margin: 0;
+  padding: 0;
+  list-style: disc inside;
 }
 
+.card--resources .links li+li {
+  margin-top: 8px;
+}
+
+/* separación ≥8px */
+
 .links a {
+  display: inline-flex;
+  /* convierte el texto en “botón” */
+  align-items: center;
+  min-height: 48px;
+  /* alto mínimo tap target */
+  min-width: 48px;
+  /* ancho mínimo tap target */
+  padding: 8px 10px;
+  /* expande el área clicable */
+  border-radius: 6px;
   color: #062130;
   background-color: transparent;
   text-decoration: underline dotted;
@@ -278,6 +320,7 @@ body.site {
   text-decoration: underline;
 }
 
+/* Estados de enlaces */
 .menu a,
 .menu a:visited,
 .menu a:active,
@@ -292,22 +335,26 @@ body.site {
   color: #062130;
 }
 
+/* Herencia de énfasis */
 .card em,
 .card strong {
   color: inherit;
 }
 
+/* Focus visible claro en teclado */
 a:focus-visible {
   outline: 2px solid #062130;
   outline-offset: 2px;
 }
 
+/* “Final Project” deshabilitado (span) */
 .disabled-link {
   color: #fff;
   cursor: not-allowed;
   opacity: 1;
 }
 
+/* Footer */
 .site-footer {
   color: var(--text-inv);
   margin-top: 8px;
@@ -344,6 +391,7 @@ a:focus-visible {
   border-radius: 0;
 }
 
+/* Responsivo */
 @media (max-width: 960px) {
   .wrap {
     max-width: 92%;
@@ -372,7 +420,8 @@ a:focus-visible {
 @media (max-width: 560px) {
   .menu {
     flex-wrap: wrap;
-    row-gap: 6px;
+    row-gap: 8px;
+    /* separación vertical mínima 8px */
     column-gap: 8px;
     justify-content: center;
   }
