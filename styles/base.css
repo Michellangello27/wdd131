@@ -45,7 +45,6 @@ body.site {
   padding-inline: 12px;
 }
 
-/* Skip link accesible */
 .skip-link {
   position: absolute;
   left: -9999px;
@@ -78,17 +77,12 @@ body.site {
 }
 
 #course-title {
-  margin: 0;
-  padding: 14px 12px;
-  text-align: center;
-  color: var(--text-inv);
   font-weight: 900;
-  letter-spacing: .2px;
   font-size: clamp(20px, 2.2vw, 28px);
   line-height: 1.15;
 }
 
-#course-title .owner {
+.owner {
   color: var(--accent-yellow);
   background-color: var(--nav-band);
   padding: 0 .35rem;
@@ -97,7 +91,6 @@ body.site {
   font-size: .85em;
 }
 
-/* NAV: objetivos táctiles ≥48px + separación ≥8px */
 .site-nav {
   background: var(--nav-band);
   color: var(--text-inv);
@@ -109,9 +102,9 @@ body.site {
   justify-content: center;
   align-items: center;
   gap: 12px;
-  /* separación entre targets */
+
   padding: 8px;
-  /* colchón exterior */
+
   margin: 0;
   min-height: 48px;
 }
@@ -120,20 +113,14 @@ body.site {
   display: flex;
 }
 
-/* permite que el <a> crezca completo */
-
 .menu a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   min-height: 48px;
-  /* alto mínimo tap target */
   min-width: 48px;
-  /* ancho mínimo tap target */
   padding: 12px 16px;
-  /* área clicable mayor */
   margin: 0;
-  /* sin solaparse con gap */
   border-radius: 8px;
   color: var(--text-inv);
   background-color: transparent;
@@ -192,7 +179,6 @@ body.site {
   font-size: clamp(16px, 1.6vw, 20px);
 }
 
-/* About */
 .about-row {
   display: grid;
   grid-template-columns: 1fr var(--about-photo-w);
@@ -207,7 +193,6 @@ body.site {
   line-height: 1.6;
 }
 
-/* País */
 .country-title {
   margin: 6px 6px 8px;
   text-align: center;
@@ -236,7 +221,6 @@ body.site {
   line-height: 1.6;
 }
 
-/* Foto */
 .portrait {
   margin: 0;
   display: flex;
@@ -251,7 +235,6 @@ body.site {
   object-fit: cover;
 }
 
-/* Bandera */
 .flag {
   margin: 0;
   display: flex;
@@ -275,7 +258,6 @@ body.site {
   font-style: italic;
 }
 
-/* Resources: tap targets accesibles en la lista */
 .card--resources {
   display: grid;
   grid-template-rows: auto 1fr;
@@ -298,18 +280,12 @@ body.site {
   margin-top: 8px;
 }
 
-/* separación ≥8px */
-
 .links a {
   display: inline-flex;
-  /* convierte el texto en “botón” */
   align-items: center;
   min-height: 48px;
-  /* alto mínimo tap target */
   min-width: 48px;
-  /* ancho mínimo tap target */
   padding: 8px 10px;
-  /* expande el área clicable */
   border-radius: 6px;
   color: #062130;
   background-color: transparent;
@@ -320,41 +296,17 @@ body.site {
   text-decoration: underline;
 }
 
-/* Estados de enlaces */
-.menu a,
-.menu a:visited,
-.menu a:active,
-.menu a:focus {
-  color: #fff;
-}
-
-.links a,
-.links a:visited,
-.links a:active,
-.links a:focus {
-  color: #062130;
-}
-
-/* Herencia de énfasis */
-.card em,
-.card strong {
-  color: inherit;
-}
-
-/* Focus visible claro en teclado */
 a:focus-visible {
   outline: 2px solid #062130;
   outline-offset: 2px;
 }
 
-/* “Final Project” deshabilitado (span) */
 .disabled-link {
   color: #fff;
   cursor: not-allowed;
   opacity: 1;
 }
 
-/* Footer */
 .site-footer {
   color: var(--text-inv);
   margin-top: 8px;
@@ -391,7 +343,6 @@ a:focus-visible {
   border-radius: 0;
 }
 
-/* Responsivo */
 @media (max-width: 960px) {
   .wrap {
     max-width: 92%;
@@ -421,7 +372,6 @@ a:focus-visible {
   .menu {
     flex-wrap: wrap;
     row-gap: 8px;
-    /* separación vertical mínima 8px */
     column-gap: 8px;
     justify-content: center;
   }
