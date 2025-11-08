@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WDD 131 – Dynamic Web Fundamentals – M. Ángel Cornejo</title>
+  <meta name="description"
+    content="WDD 131 Dynamic Web Fundamentals — homepage of Miguel Ángel Cornejo D. About me, links to Canvas & LinkedIn, favorite scripture, and curated web-dev resources.">
+  <meta name="author" content="Miguel Ángel Cornejo D.">
+
+  <link rel="canonical" href="https://michellangello27.github.io/wdd131/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="images/macd.webp">
+  <link rel="stylesheet" href="styles/base.css">
+  <script src="scripts/getdates.js" defer></script>
+</head>
+
+<body class="site">
+
+  <a class="skip-link" href="#about-title">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="title-band">
+      <h1>
+        <span id="course-title">WDD131: Dynamics Web Fundamentals –</span>
+        <span class="owner">Miguel Ángel Cornejo D.</span>
+      </h1>
+    </div>
+
+    <nav class="site-nav" aria-label="Primary navigation">
+      <div class="wrap">
+        <ul class="menu">
+          <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+          <li><a href="https://byupw.instructure.com/" target="_blank" rel="noopener noreferrer">Canvas</a></li>
+          <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/moro/7?lang=eng&id=45-48#p45"
+              target="_blank" rel="noopener noreferrer">Favorite Scripture</a></li>
+          <li><span class="disabled-link" aria-disabled="true">Final Project</span></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main class="site-main">
+    <div class="wrap">
+      <div class="grid-two-cols">
+
+        <section class="card card--about" aria-labelledby="about-title">
+          <h2 class="card__header" id="about-title">About Me</h2>
+
+          <div class="about-row">
+            <div class="about-text box">
+              <p>
+                Hello everyone, my name is <strong>Miguel Ángel Cornejo Durand</strong>.
+                I'm from Cusco, Peru, and the father of a beautiful princess who is my drive and motivation.
+                I'm a member of <em>The Church of Jesus Christ of Latter-day Saints</em> and serve in the Arequipa
+                Temple.
+                I love learning new things, especially those related to technology.
+                I enjoy music, movies, video games, and chess. I'm passionate about <em>programming and technology</em>.
+              </p>
+            </div>
+
+            <figure class="portrait box">
+              <img src="images/macd.webp" alt="Photo of Miguel Ángel Cornejo" width="513" height="675">
+            </figure>
+          </div>
+
+          <h3 class="country-title">Cusco, Peru</h3>
+          <hr class="rule">
+
+          <div class="country-row">
+            <figure class="flag box">
+              <img src="images/Flag_of_Peru.webp" alt="Official flag of Peru" width="330" height="220"
+                loading="lazy">
+              <figcaption>Official Flag of Peru</figcaption>
+            </figure>
+
+            <p class="country-text box">
+              Peru is located on the west coast of South America. It encompasses the coastal desert,
+              the Andes mountain range, and the Amazon rainforest. It is known for the Inca Empire and Machu Picchu.
+              The official language is Spanish, although native languages such as Quechua are also spoken.
+              Its rich culture is evident in its cuisine, landscapes, and the legacy of its ancient civilizations,
+              such as the Nazca. Peru is also known for its unique cuisine. Cusco is its historic capital and a UNESCO
+              World Heritage Site.
+            </p>
+          </div>
+        </section>
+
+        <section class="card card--resources" aria-labelledby="resources-title">
+          <h2 class="card__header" id="resources-title">Web Dev Resources</h2>
+          <div class="resources box">
+            <ul class="links">
+              <li><a href="https://dev.to/" target="_blank" rel="noopener noreferrer">Dev.to Community</a></li>
+              <li><a href="https://www.smashingmagazine.com/" target="_blank" rel="noopener noreferrer">Smashing
+                  Magazine</a></li>
+              <li><a href="https://css-tricks.com/" target="_blank" rel="noopener noreferrer">CSS Tricks</a></li>
+              <li><a href="https://www.w3schools.com/" target="_blank" rel="noopener noreferrer">W3 Schools</a></li>
+              <li><a href="https://www.udemy.com/" target="_blank" rel="noopener noreferrer">Udemy</a></li>
+              <li><a href="https://placeholder.com/" target="_blank" rel="noopener noreferrer">Image Placeholder</a>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>&copy; <span id="currentyear"></span> • Miguel Ángel Cornejo D. • Cusco, Perú</p>
+      <p id="lastModified"></p>
+    </div>
+  </footer>
+
+</body>
+
+</html>
