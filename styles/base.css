@@ -333,13 +333,4 @@ a:focus-visible {
   font-size: clamp(12px, 1.1vw, 14px);
 }
 
-.site-footer>.wrap {
-  max-width: 100%;
-  width: 100%;
-  padding-inline: 0;
-}
-
-.site-footer p {
-  border-radius: 0;
-}
 
