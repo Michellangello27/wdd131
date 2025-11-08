@@ -77,7 +77,7 @@ body.site {
   justify-content: center;
 }
 
-#course-title {
+#course {
   font-weight: 900;
   font-size: clamp(20px, 2.2vw, 28px);
   line-height: 1.15;
