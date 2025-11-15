@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temple Album</title>
+
+    <meta name="description" content="A collection of LDS Temples pictures around the world.">
+    <meta name="author" content="Miguel Ángel Cornejo D.">
+
+    <link rel="canonical" href="https://michellangello27.github.io/wdd131/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/temples.css">
+    <link rel="stylesheet" href="styles/temples-large.css">
+
+    <script src="scripts/temples.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="brand">
+            <h1>Temple Album</h1>
+            <button id="menu" class="menu" aria-label="Open menu" aria-expanded="false"
+                aria-controls="primary-nav">☰</button>
+        </div>
+        <nav id="primary-nav" class="nav">
+            <a href="#">Home</a>
+            <a href="#">Old</a>
+            <a href="#">New</a>
+            <a href="#">Large</a>
+            <a href="#">Small</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Home</h2>
+        <section class="grid">
+            <figure>
+                <img src="images/arequipa_peru_temple.webp" alt="Arequipa Peru Temple">
+                <figcaption>Arequipa, Perú</figcaption>
+            </figure>
+            <figure>
+                <img src="images/bountiful_temple_lds.webp" alt="Bountiful Temple">
+                <figcaption>Bountiful Temple, Utah</figcaption>
+            </figure>
+            <figure>
+                <img src="images/buenos_aires_argentina_temple.webp" alt="Buenos Aires Temple">
+                <figcaption>Buenos Aires, Argentina</figcaption>
+            </figure>
+            <figure>
+                <img src="images/pocatello_idaho_temple.webp" alt="Pocatello Idaho Temple">
+                <figcaption>Pocatello, Idaho</figcaption>
+            </figure>
+            <figure>
+                <img src="images/lima_peru_temple_lds.webp" alt="Lima Temple">
+                <figcaption>Lima, Peru</figcaption>
+            </figure>
+            <figure>
+                <img src="images/rome_italy_temple.webp" alt="Rome Temple">
+                <figcaption>Rome, Italy</figcaption>
+            </figure>
+            <figure>
+                <img src="images/salt_lake_temple_lds.webp" alt="Salt Lake Temple">
+                <figcaption>Salt Lake, Utah</figcaption>
+            </figure>
+            <figure>
+                <img src="images/la_paz_bolivia_temple.webp" alt="La Paz Temple">
+                <figcaption>La Paz, Bolivia</figcaption>
+            </figure>
+            <figure>
+                <img src="images/trujillo_peru_temple.webp" alt="Trujillo Temple">
+                <figcaption>Trujillo, Peru</figcaption>
+            </figure>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="wrap">
+            <p>&copy; <span id="currentyear"></span> • Miguel Ángel Cornejo D. • Cusco, Perú</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+
+</html>

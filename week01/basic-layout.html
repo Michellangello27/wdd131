@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Basic Layout</title>
+    <link rel="stylesheet" href="styles/layout.css" />
+</head>
+
+
+<body class="site">
+    <!-- HEADER (incluye NAV dentro) -->
+    <header class="header" role="banner">
+        <div class="wrap header-bar">
+            <p>Header Content</p>
+        </div>
+
+        <nav class="site-nav" aria-label="Principal">
+            <div class="wrap">
+                <ul class="nav__list">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- CONTENIDO (dos columnas) -->
+    <section class="content" role="main">
+        <div class="wrap content-grid">
+            <main class="main">
+                <p>Main Content</p>
+            </main>
+            <aside class="aside">
+                <p>Aside Content</p>
+            </aside>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer" role="contentinfo">
+        <div class="wrap">
+            <p>Footer Content</p>
+        </div>
+    </footer>
+</body>
+
+</html>

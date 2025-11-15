@@ -1,0 +1,171 @@
+/* =====================
+   Variables y base
+===================== */
+:root {
+    --bg-1: #2f3236;
+    /* gris oscuro header/footer */
+    --bg-2: #000000;
+    /* barra de navegación */
+    --main: #d9d9d9;
+    /* área main */
+    --aside: #ffffff;
+    /* área aside */
+    --text: #e9eef4;
+    --text-dark: #2b2f35;
+    --muted: #cfd5de;
+    --border: #e6e6e6;
+    --maxw: 980px;
+    --pad: 16px;
+    --font: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+
+* {
+    box-sizing: border-box
+}
+
+html,
+body {
+    height: 100%
+}
+
+body {
+    margin: 0;
+    font-family: var(--font);
+    color: var(--text-dark);
+    background: #fff;
+
+    /* ====== GRID GLOBAL en <body> ====== */
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    /* header | content | footer */
+    grid-template-areas:
+        "header"
+        "content"
+        "footer";
+    min-height: 100svh;
+}
+
+/* contenedor común: MISMO margen izquierdo para TODAS las secciones */
+.wrap {
+    max-width: var(--maxw);
+    margin-inline: auto;
+    padding-inline: var(--pad);
+}
+
+/* =====================
+   Header + Nav (nav DENTRO de header)
+===================== */
+.header {
+    grid-area: header;
+    background: var(--bg-1);
+    color: var(--text);
+}
+
+.header-bar {
+    padding-block: 14px;
+    text-align: left;
+}
+
+.header-bar p {
+    margin: 0;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.site-nav {
+    background: var(--bg-2);
+    border-top: 1px solid #222;
+    border-bottom: 1px solid #222;
+}
+
+.nav__list {
+    list-style: none;
+    margin: 0;
+    padding: 10px 0;
+
+    /* ====== FLEX en el menú ====== */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav__list a {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 700;
+    display: block;
+    padding: 6px 8px;
+}
+
+/* =====================
+   Content (2 columnas reales)
+===================== */
+.content {
+    grid-area: content;
+    background: #fff;
+}
+
+.content-grid {
+    /* Grid solo aquí para 2 columnas: main | aside */
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    /* proporción 3:1 */
+    gap: 0;
+    /* sin “tercera columna” */
+}
+
+.main {
+    background: var(--main);
+    min-height: 320px;
+    padding: var(--pad);
+    text-align: left;
+    /* placeholder alineado a la izquierda */
+}
+
+.aside {
+    background: var(--aside);
+    min-height: 320px;
+    padding: var(--pad);
+    border-left: 1px solid var(--border);
+    text-align: left;
+}
+
+/* =====================
+   Footer
+===================== */
+.footer {
+    grid-area: footer;
+    background: var(--bg-1);
+}
+
+.footer .wrap {
+    padding-block: 22px;
+    text-align: center;
+}
+
+.footer p {
+    margin: 0;
+    color: var(--text);
+    font-weight: 600
+}
+
+/* =====================
+   Responsivo
+===================== */
+@media (max-width: 800px) {
+    .wrap {
+        padding-inline: 12px
+    }
+
+    .content-grid {
+        grid-template-columns: 1fr
+    }
+
+    /* stack: main arriba, aside abajo */
+    .aside {
+        border-left: 0;
+        border-top: 1px solid var(--border)
+    }
+}

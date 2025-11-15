@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pruebas NaN – JavaScript</title>
+    <script src="scripts/ejem_04.js" defer></script>
+    <style>
+        :root {
+            font-family: system-ui, Arial, sans-serif;
+        }
+
+        body {
+            margin: 24px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 1000px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background: #f3f3f3;
+        }
+
+        code {
+            white-space: pre-wrap;
+        }
+
+        .ok {
+            font-weight: 600;
+        }
+
+        .btn {
+            padding: 10px 14px;
+            border: 1px solid #ccc;
+            background: #f9f9f9;
+            cursor: pointer;
+            border-radius: 6px;
+        }
+
+        .btn:hover {
+            background: #f1f1f1;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Pruebas rápidas de <code>NaN</code></h1>
+    <p>
+        Ejecuta estos casos para ver qué valores producen <code>NaN</code>. Los resultados salen
+        en la tabla y en la consola del navegador (o en la Terminal si lo corres con Node y adaptas la salida).
+    </p>
+
+    <button id="run" class="btn">Ejecutar pruebas</button>
+
+    <table aria-label="Resultados NaN" style="margin-top:16px">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Operación</th>
+                <th>Resultado</th>
+                <th>typeof</th>
+                <th>Number.isNaN()</th>
+                <th>isNaN()</th>
+                <th>Explicación</th>
+            </tr>
+        </thead>
+        <tbody id="results"></tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
