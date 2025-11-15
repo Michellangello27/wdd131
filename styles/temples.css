@@ -8,14 +8,6 @@
     --link-hover: #2E6E4C;
     --radius: 14px;
     --bar: #BEE9E8;
-    /* para el footer en bandas */
-    --title-band: #1B4965;
-    /* azul muy oscuro */
-    --nav-band: #123524;
-    /* verde muy oscuro */
-    --accent-yellow: #FACC15;
-    /* amarillo fuerte y legible */
-
 }
 
 * {
@@ -151,34 +143,23 @@ footer .muted {
     font-size: .95rem;
 }
 
-/* Párrafos sin padding vertical exagerado */
 .site-footer p {
     margin: 0;
     font-weight: 700;
 }
 
-/* Primera línea del footer */
 .site-footer p:first-child {
     background: var(--fg);
     color: #f9fafb;
     padding: 0.35rem 0.25rem;
 }
 
-/* Segunda línea: última modificación */
 #lastModified {
     background: var(--fg);
     color: var(--background);
     font-size: clamp(12px, 1.1vw, 14px);
     padding: 0.35rem 0.25rem 0.1rem;
 }
-
-
-
-
-
-
-
-
 
 @media (min-width: 480px) {
     .grid {
