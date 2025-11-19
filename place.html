@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Perú | Country Page</title>
+    <meta name="description" content="Information page about Perú with relevant country information and weather data.">
+    <meta name="author" content="Miguel Ángel Cornejo Durand">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <h1>Perú</h1>
+        <div class="accent-bar" aria-hidden="true"></div>
+    </header>
+
+    <main>
+        <section class="hero" aria-label="Hero Peru">
+            <picture>
+                <!-- Wide image -->
+                <source media="(min-width: 768px)" srcset="
+            images/ocean_1000.webp 1000w,
+            images/ocean_1400.webp 1400w,
+            images/ocean_1800.webp 1800w
+          " sizes="(min-width: 1200px) 1200px, 92vw" type="image/webp" />
+                <!-- Mobile image -->
+                <source media="(max-width: 767px)" srcset="
+            images/city_400.webp 400w,
+            images/city_700.webp 700w
+          " sizes="100vw" type="image/webp" />
+                <img src="images/city_700.webp" alt="Historic architecture in Montevideo, Uruguay" width="1400"
+                    height="700" loading="eager">
+            </picture>
+
+            <div class="hero-title">
+                <h2>Republic of Perú</h2>
+            </div>
+
+            <section class="card data" aria-labelledby="data-title">
+                <h3 id="data-title">Data</h3>
+                <ul class="kv">
+                    <li><span class="k">Area:</span><span class="v">1,285,215 sq km</span></li>
+                    <li><span class="k">Population:</span><span class="v">≈ 34,352,720 population</span></li>
+                    <li><span class="k">Capital:</span><span class="v">Lima</span></li>
+                    <li><span class="k">Languages:</span><span class="v">Spanish, Quechua, Aimara and other indigenous
+                            languajes</span></li>
+                    <li><span class="k">Currency:</span><span class="v">Sol (S/ PEN)</span></li>
+                    <li><span class="k">Time Zone:</span><span class="v">UTC−5</span></li>
+                    <li><span class="k">Calling Code:</span><span class="v">+051</span></li>
+                    <li><span class="k">Internet TLD:</span><span class="v">.pe</span></li>
+                </ul>
+            </section>
+
+            <section class="card weather" aria-labelledby="weather-title">
+                <h3 id="weather-title">Weather</h3>
+
+                <figure class="weather-icon-mobile">
+                    <img src="images/weather_icon.svg" alt="Weather icon" width="80" height="80">
+                </figure>
+
+                <ul class="kv">
+                    <li><span class="k">Temperature:</span><span class="v"><span id="temp-value">10</span> °C</span>
+                    </li>
+                    <li><span class="k">Conditions:</span><span class="v">Partly Cloudy</span></li>
+                    <li><span class="k">Wind:</span><span class="v"><span id="wind-value">5</span> km/h</span></li>
+                    <li><span class="k">Wind Chill:</span><span class="v"><span id="windchill">N/A</span></span></li>
+                </ul>
+            </section>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-bar">
+            <p>&copy; <span id="currentyear"></span> Miguel Ángel Cormejo Durand · Cusco · Perú</p>
+            <p>Last Modification: <span id="lastModified"></span></p>
+        </div>
+    </footer>
+</body>
+
+</html>
