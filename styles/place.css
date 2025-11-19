@@ -1,22 +1,37 @@
 :root {
-    --primary: #5EC1F4;
-    --primary-dark: #1B4965;
-    --accent: #F0C419;
-    --surface: #ffffff;
-    --text: #0f172a;
-    --muted: #475569;
+    /* PALETA ACCESIBLE Y PROFESIONAL */
+    --primary: #0A3A52;
+    /* azul petróleo principal */
+    --primary-dark: #062A3A;
+    --primary-light: #1E88B5;
 
-    --radius: 10px;
-    --shadow: 0 10px 24px rgba(0, 0, 0, .16);
-    --card-border: rgba(0, 0, 0, .06);
+    --accent: #C00000;
+    /* rojo profundo profesional */
+
+    --surface: #FFFFFF;
+    /* fondo sólido blanco */
+    --surface-glass: rgba(255, 255, 255, 0.94);
+    /* glass accesible */
+    --surface-page: #F3F7FB;
+    /* fondo general suave */
+
+    --text: #1F2937;
+    /* gris muy oscuro para texto principal */
+    --text-muted: #4B5563;
+    /* gris medio para labels */
+
+    --radius: 12px;
+    --shadow: 0 10px 24px rgba(0, 0, 0, .20);
+    --card-border: rgba(0, 0, 0, .08);
 
     --ribbon-out: 29px;
 }
 
+/* RESET */
 * {
     box-sizing: border-box;
     margin: 0;
-    padding: 0
+    padding: 0;
 }
 
 html,
@@ -28,9 +43,9 @@ body {
 }
 
 body {
-    font-family: "Open Sans", sans-serif;
+    font-family: "Libre Baskerville", sans-serif;
     color: var(--text);
-    background: #f6fbff;
+    background: var(--surface-page);
     line-height: 1.5;
 }
 
@@ -38,24 +53,27 @@ main {
     flex: 1;
 }
 
+/* HEADER */
 .site-header {
-    background: var(--primary-dark);
-    color: #fff;
+    background: var(--primary);
+    color: #FFFFFF;
     text-align: center;
     padding: 1rem .75rem .5rem;
     box-shadow: var(--shadow);
 }
 
 .site-header h1 {
-    font: 700 clamp(1.6rem, 4.5vw, 2.4rem)/1 "Bebas Neue", sans-serif;
+    font: 700 clamp(1.6rem, 4.5vw, 2.4rem)/1 "Libre Baskerville", sans-serif;
 }
 
+/* BARRA DE ACENTO ROJA */
 .accent-bar {
     height: 8px;
     background: var(--accent);
     margin-top: .4rem;
 }
 
+/* HERO */
 .hero {
     position: relative;
     width: min(1200px, 92vw);
@@ -72,6 +90,7 @@ main {
     height: auto;
 }
 
+/* TÍTULO SOBRE LA IMAGEN */
 .hero-title {
     position: absolute;
     top: 12px;
@@ -83,13 +102,25 @@ main {
 
 .hero-title h2 {
     display: inline-block;
-    background: rgba(0, 0, 0, .55);
-    color: #fff;
+    background: rgba(0, 0, 0, .65);
+    /* fondo oscuro para contraste AA */
     padding: .4rem .9rem;
     border-radius: 8px;
-    font: 700 clamp(1.1rem, 3vw, 2rem)/1 "Bebas Neue", sans-serif;
+    font: 700 clamp(1.1rem, 3vw, 2rem)/1 "Libre Baskerville", sans-serif;
+    letter-spacing: 0.03em;
 }
 
+/* Republic y Perú en rojo profundo */
+.hero-title .hero-word-main-red {
+    color: var(--accent);
+}
+
+/* "of" en blanco */
+.hero-title .hero-word-of-white {
+    color: #FFFFFF;
+}
+
+/* CARDS (MÓVIL / BASE) */
 .card {
     background: var(--surface);
     border-radius: var(--radius);
@@ -98,6 +129,7 @@ main {
     box-shadow: var(--shadow);
     margin: .75rem auto 0;
     width: min(800px, 92vw);
+    color: var(--text);
 }
 
 .kv {
@@ -114,22 +146,24 @@ main {
 
 .k {
     font-weight: 700;
-    color: var(--muted);
+    color: var(--text-muted);
 }
 
 .v {
     font-weight: 600;
 }
 
+/* TÍTULOS DE CARDS */
 .data h3,
 .weather h3 {
-    font: 700 1.35rem/1 "Bebas Neue", sans-serif;
-    color: var(--primary-dark);
+    font: 700 1.35rem/1 "Libre Baskerville", sans-serif;
+    color: var(--primary);
     text-align: center;
     margin-bottom: .6rem;
     text-transform: capitalize;
 }
 
+/* ICONO CLIMA EN MÓVIL */
 .weather-icon-mobile {
     display: block;
     text-align: center;
@@ -142,24 +176,30 @@ main {
     display: inline-block;
 }
 
+/* FOOTER */
 .site-footer {
     margin-top: auto;
 }
 
 .footer-bar {
-    background: var(--primary-dark);
-    color: #fff;
+    background: var(--primary);
+    color: #F1F5F9;
     text-align: center;
     padding: .9rem .75rem;
     border-top: 6px solid var(--accent);
+    /* rojo profundo */
+    font-size: 0.9rem;
 }
 
+/* DESKTOP / TABLET */
 @media (min-width:768px) {
+
     .card {
         position: absolute;
         margin: 0;
         width: auto;
-        background: rgba(255, 255, 255, .78);
+        background: var(--surface-glass);
+        /* efecto glass pero con buena opacidad */
         border: 1px solid rgba(0, 0, 0, .10);
         box-shadow: 0 10px 24px rgba(0, 0, 0, .16);
         padding: 1rem 1.1rem 1rem;
@@ -181,6 +221,7 @@ main {
         max-width: 360px;
     }
 
+    /* RIBBON DE LOS TÍTULOS DE CARD */
     .card h3 {
         margin: -1rem 0 .75rem 0;
         display: inline-flex;
@@ -188,9 +229,9 @@ main {
         transform: translateX(calc(-1 * var(--ribbon-out)));
         max-width: 60%;
         padding: .70rem 1rem;
-        background: var(--primary-dark);
-        color: #fff;
-        font: 700 1.15rem/1 "Bebas Neue", sans-serif;
+        background: var(--primary);
+        color: #FFFFFF;
+        font: 700 1.15rem/1 "Libre Baskerville", sans-serif;
         letter-spacing: .4px;
         text-transform: none;
     }
