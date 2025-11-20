@@ -1,33 +1,19 @@
 :root {
-    /* PALETA ACCESIBLE Y PROFESIONAL */
     --primary: #0A3A52;
-    /* azul petróleo principal */
     --primary-dark: #062A3A;
     --primary-light: #1E88B5;
-
     --accent: #C00000;
-    /* rojo profundo profesional */
-
     --surface: #FFFFFF;
-    /* fondo sólido blanco */
     --surface-glass: rgba(255, 255, 255, 0.94);
-    /* glass accesible */
     --surface-page: #F3F7FB;
-    /* fondo general suave */
-
     --text: #1F2937;
-    /* gris muy oscuro para texto principal */
     --text-muted: #4B5563;
-    /* gris medio para labels */
-
     --radius: 12px;
     --shadow: 0 10px 24px rgba(0, 0, 0, .20);
     --card-border: rgba(0, 0, 0, .08);
-
     --ribbon-out: 29px;
 }
 
-/* RESET */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -53,7 +39,6 @@ main {
     flex: 1;
 }
 
-/* HEADER */
 .site-header {
     background: var(--primary);
     color: #FFFFFF;
@@ -66,14 +51,12 @@ main {
     font: 700 clamp(1.6rem, 4.5vw, 2.4rem)/1 "Libre Baskerville", sans-serif;
 }
 
-/* BARRA DE ACENTO ROJA */
 .accent-bar {
     height: 8px;
     background: var(--accent);
     margin-top: .4rem;
 }
 
-/* HERO */
 .hero {
     position: relative;
     width: min(1200px, 92vw);
@@ -90,7 +73,6 @@ main {
     height: auto;
 }
 
-/* TÍTULO SOBRE LA IMAGEN */
 .hero-title {
     position: absolute;
     top: 12px;
@@ -103,24 +85,20 @@ main {
 .hero-title h2 {
     display: inline-block;
     background: rgba(0, 0, 0, .65);
-    /* fondo oscuro para contraste AA */
     padding: .4rem .9rem;
     border-radius: 8px;
     font: 700 clamp(1.1rem, 3vw, 2rem)/1 "Libre Baskerville", sans-serif;
     letter-spacing: 0.03em;
 }
 
-/* Republic y Perú en rojo profundo */
 .hero-title .hero-word-main-red {
     color: var(--accent);
 }
 
-/* "of" en blanco */
 .hero-title .hero-word-of-white {
     color: #FFFFFF;
 }
 
-/* CARDS (MÓVIL / BASE) */
 .card {
     background: var(--surface);
     border-radius: var(--radius);
@@ -153,7 +131,6 @@ main {
     font-weight: 600;
 }
 
-/* TÍTULOS DE CARDS */
 .data h3,
 .weather h3 {
     font: 700 1.35rem/1 "Libre Baskerville", sans-serif;
@@ -163,7 +140,6 @@ main {
     text-transform: capitalize;
 }
 
-/* ICONO CLIMA EN MÓVIL */
 .weather-icon-mobile {
     display: block;
     text-align: center;
@@ -176,7 +152,6 @@ main {
     display: inline-block;
 }
 
-/* FOOTER */
 .site-footer {
     margin-top: auto;
 }
@@ -187,11 +162,9 @@ main {
     text-align: center;
     padding: .9rem .75rem;
     border-top: 6px solid var(--accent);
-    /* rojo profundo */
     font-size: 0.9rem;
 }
 
-/* DESKTOP / TABLET */
 @media (min-width:917px) {
 
     .card {
@@ -199,7 +172,6 @@ main {
         margin: 0;
         width: auto;
         background: var(--surface-glass);
-        /* efecto glass pero con buena opacidad */
         border: 1px solid rgba(0, 0, 0, .10);
         box-shadow: 0 10px 24px rgba(0, 0, 0, .16);
         padding: 1rem 1.1rem 1rem;
@@ -221,7 +193,6 @@ main {
         max-width: 360px;
     }
 
-    /* RIBBON DE LOS TÍTULOS DE CARD */
     .card h3 {
         margin: -1rem 0 .75rem 0;
         display: inline-flex;
