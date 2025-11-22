@@ -1,3 +1,6 @@
+// ======================
+// Footer: año actual y fecha de última modificación
+// ======================
 const currentYearSpan = document.querySelector('#currentyear');
 if (currentYearSpan) {
   currentYearSpan.textContent = new Date().getFullYear();
@@ -8,7 +11,9 @@ if (lastModifiedP) {
   lastModifiedP.textContent = `Last Modification: ${document.lastModified}`;
 }
 
-
+// ======================
+// Menú hamburguesa
+// ======================
 const menuBtn = document.getElementById('menu');
 const nav = document.getElementById('primary-nav');
 
@@ -20,6 +25,9 @@ if (menuBtn && nav) {
   });
 }
 
+// ======================
+// Datos de templos
+// ======================
 const temples = [
   {
     templeName: "Aba Nigeria",
@@ -116,9 +124,36 @@ const temples = [
     area: 26969,
     imageUrl:
       "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/arequipa-peru/400x250/2-3c2316607190934fc0265f4107b5013b0cc4b21e.jpeg"
-  }
+  },
+  {
+    templeName: "Bountiful Utah",
+    location: "Bountiful Utah, United States",
+    dedicated: "1995, January, 8-14",
+    area: 104000,
+    imageUrl:
+      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/bountiful-utah/400x250/bountiful-temple-766347-wallpaper.jpg"
+  },
+  {
+    templeName: "Buenos Aires Argentina",
+    location: "Buenos Aires, Argentina",
+    dedicated: "1986, January, 17-19",
+    area: 30659,
+    imageUrl:
+      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/buenos-aires-argentina/400x250/buenos-aires-argentina-temple-2012-1021302-wallpaper.jpg"
+  },
+  {
+    templeName: "Kansas City Missouri ",
+    location: "Kansas City Missouri, United States",
+    dedicated: "2012, May, 6",
+    area: 32000,
+    imageUrl:
+      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/kansas-city-missouri/400x250/kansas-city-temple-lds-998169-wallpaper.jpg"
+  },
 ];
 
+// ======================
+// Helpers de filtrado/render
+// ======================
 function getTempleYear(temple) {
   const yearPart = temple.dedicated.split(',')[0];
   const year = parseInt(yearPart, 10);
@@ -154,7 +189,7 @@ function renderTemples(list) {
     const img = document.createElement('img');
     img.src = temple.imageUrl;
     img.alt = `${temple.templeName} Temple`;
-    img.loading = 'lazy'; 
+    img.loading = 'lazy';
 
     figure.appendChild(title);
     figure.appendChild(location);
@@ -176,22 +211,22 @@ function applyFilter(filter) {
   let filtered = temples;
 
   switch (filter) {
-    case 'old': // antes de 1900
+    case 'old':   // antes de 1900
       filtered = temples.filter((t) => {
         const year = getTempleYear(t);
         return year !== null && year < 1900;
       });
       break;
-    case 'new': // después de 2000
+    case 'new':   // después de 2000
       filtered = temples.filter((t) => {
         const year = getTempleYear(t);
         return year !== null && year > 2000;
       });
       break;
-    case 'large': // > 90,000
+    case 'large': // área > 90,000
       filtered = temples.filter((t) => t.area > 90000);
       break;
-    case 'small': // < 10,000
+    case 'small': // área < 10,000
       filtered = temples.filter((t) => t.area < 10000);
       break;
     case 'home':
@@ -203,33 +238,39 @@ function applyFilter(filter) {
   renderTemples(filtered);
 }
 
-document.querySelectorAll('#primary-nav a').forEach((link) => {
-  link.addEventListener('click', (event) => {
-    event.preventDefault();
+// ======================
+// Filtros del nav
+// ======================
+document.addEventListener('DOMContentLoaded', () => {
+  // Eventos de los links del nav
+  document.querySelectorAll('#primary-nav a').forEach((link) => {
+    link.addEventListener('click', (event) => {
+      event.preventDefault();
 
-    const text = link.textContent.trim().toLowerCase();
-    let filter = 'home';
+      const text = link.textContent.trim().toLowerCase();
+      let filter = 'home';
 
-    if (text === 'old') filter = 'old';
-    else if (text === 'new') filter = 'new';
-    else if (text === 'large') filter = 'large';
-    else if (text === 'small') filter = 'small';
-    else filter = 'home';
+      if (text === 'old') filter = 'old';
+      else if (text === 'new') filter = 'new';
+      else if (text === 'large') filter = 'large';
+      else if (text === 'small') filter = 'small';
 
-    setActiveLink(link);
-    applyFilter(filter);
+      setActiveLink(link);
+      applyFilter(filter);
 
-    if (nav && nav.classList.contains('open')) {
-      nav.classList.remove('open');
-      menuBtn.setAttribute('aria-expanded', 'false');
-      menuBtn.textContent = '☰';
-    }
+      // Cerrar menú en móvil después de elegir filtro
+      if (nav && nav.classList.contains('open')) {
+        nav.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded', 'false');
+        menuBtn.textContent = '☰';
+      }
+    });
   });
+
+  // Render inicial (Home = todos)
+  applyFilter('home');
+  const firstLink = document.querySelector('#primary-nav a');
+  if (firstLink) {
+    setActiveLink(firstLink);
+  }
 });
-
-
-applyFilter('home');
-const firstLink = document.querySelector('#primary-nav a');
-if (firstLink) {
-  setActiveLink(firstLink);
-}

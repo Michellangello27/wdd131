@@ -130,6 +130,11 @@ figcaption {
     font-weight: 600;
     margin-top: 0.5rem;
 }
+.nav a.active {
+    background: var(--card-bg);
+    color: var(--accent);
+    font-weight: 700;
+}
 
 footer {
     border-top: 1px solid #e5e7eb;
