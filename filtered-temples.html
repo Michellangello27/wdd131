@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temple Album</title>
+
+    <meta name="description" content="A collection of LDS Temples pictures around the world.">
+    <meta name="author" content="Miguel Ángel Cornejo D.">
+
+    <link rel="canonical" href="https://michellangello27.github.io/wdd131/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Libre Baskerville (body) + Bebas Neue (headings) -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="./styles/filtered-temples.css">
+    <link rel="stylesheet" href="./styles/filtered-temples-large.css">
+
+    <script src="./scripts/filtered-temples.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="brand">
+            <h1>Temple Album</h1>
+            <button id="menu" class="menu" aria-label="Open menu" aria-expanded="false"
+                aria-controls="primary-nav">☰</button>
+        </div>
+        <nav id="primary-nav" class="nav">
+            <a href="#">Home</a>
+            <a href="#">Old</a>
+            <a href="#">New</a>
+            <a href="#">Large</a>
+            <a href="#">Small</a>
+        </nav>
+    </header>
+
+    <main>
+        <section aria-labelledby="cards-heading">
+            <h2 id="cards-heading">Temples Gallery</h2>
+            <div id="cards" class="grid" aria-live="polite"></div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <p>&copy; <span id="currentyear"></span> • Miguel Ángel Cornejo D. • Cusco, Peru</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+
+</html>
