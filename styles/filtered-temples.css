@@ -150,11 +150,6 @@ footer .muted {
 }
 
 .site-footer p {
-    margin: 0;
-    font-weight: 700;
-}
-
-.site-footer p {
     margin: 0.15rem 0;
     font-weight: 700;
     color: var(--fg);
