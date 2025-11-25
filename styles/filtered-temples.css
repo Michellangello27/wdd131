@@ -3,6 +3,7 @@
     --fg: #1B4965;
     --accent: #2E6E4C;
     --muted: #374151;
+    /* gris más oscuro → AAA sobre el celeste */
     --card: #F5F5DC;
     --link: #1B4965;
     --link-hover: #2E6E4C;
@@ -13,12 +14,12 @@
 * {
     box-sizing: border-box;
     margin: 0;
-    padding: 0
+    padding: 0;
 }
 
 html,
 body {
-    height: 100%
+    height: 100%;
 }
 
 body {
@@ -73,6 +74,7 @@ h1 {
 .nav a {
     text-decoration: none;
     color: var(--link);
+    /* azul oscuro sobre celeste → AAA */
     padding: .5rem .75rem;
     border-radius: .5rem;
     display: block;
@@ -81,7 +83,18 @@ h1 {
 .nav a:hover,
 .nav a:focus {
     background: var(--card);
+    /* beige */
     color: var(--link-hover);
+    /* verde, pero sobre beige → AA/AAA suficiente */
+}
+
+/* ENLACE ACTIVO (filtro seleccionado) */
+.nav a.active {
+    background: var(--card);
+    /* beige */
+    color: var(--fg);
+    /* azul oscuro */
+    font-weight: 700;
 }
 
 .nav.open {
@@ -110,7 +123,6 @@ h2 {
 
 figure {
     text-align: center;
-    ;
     background: var(--card);
     border-radius: 14px;
     overflow: hidden;
@@ -129,22 +141,20 @@ figcaption {
     font-weight: 600;
     margin-top: 0.5rem;
 }
-.nav a.active {
-    background: var(--card);
-    color: var(--fg);
-    font-weight: 700;
-}
 
 footer {
     border-top: 1px solid #e5e7eb;
     padding: 1rem;
     text-align: center;
     background: var(--bar);
+    /* celeste */
     margin-top: 1rem;
 }
 
+/* Texto “extra” que quieras grisito pero con AAA sobre el celeste */
 footer .muted {
     color: var(--muted);
+    /* #374151 → AAA sobre #BEE9E8 */
     font-size: .95rem;
 }
 
@@ -152,12 +162,15 @@ footer .muted {
     margin: 0.15rem 0;
     font-weight: 700;
     color: var(--fg);
+    /* azul oscuro sobre celeste → AAA */
     background: transparent;
 }
 
+/* Línea de “Last Modification” (el que daba problema) */
 #lastModified {
     font-weight: 400;
     color: var(--muted);
+    /* ahora #374151 → AAA */
     font-size: clamp(12px, 1.1vw, 14px);
     background: transparent;
     padding: 0;
