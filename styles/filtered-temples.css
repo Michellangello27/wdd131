@@ -2,7 +2,7 @@
     --background: #ffffff;
     --fg: #1B4965;
     --accent: #2E6E4C;
-    --muted: #4b5563;
+    --muted: #374151;
     --card: #F5F5DC;
     --link: #1B4965;
     --link-hover: #2E6E4C;
@@ -130,8 +130,8 @@ figcaption {
     margin-top: 0.5rem;
 }
 .nav a.active {
-    background: var(--card-bg);
-    color: var(--accent);
+    background: var(--card);
+    color: var(--fg);
     font-weight: 700;
 }
 
