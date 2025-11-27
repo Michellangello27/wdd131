@@ -1,0 +1,145 @@
+:root {
+  /* Paleta Peruvian Handicrafts Guide */
+  --bg: #FFFDF7;
+  /* Warm Ivory – fondo general */
+  --text: #1F2933;
+  /* Dark Gray – texto principal */
+  --primary: #234E52;
+  /* Deep Teal Green – encabezados, header, footer */
+  --accent: #C05621;
+  /* Burnt Orange – acentos, enlaces */
+  --accent-soft: #F6AD55;
+  /* Soft Orange – resaltados suaves */
+  --card: #FFFFFF;
+  /* Tarjeta/base de secciones */
+  --border: #E2E8F0;
+  /* Borde suave */
+}
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: "Open Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.7;
+  color: var(--text);
+  background: var(--bg);
+}
+
+/* Encabezados */
+h1,
+h2,
+h3 {
+  font-family: "Libre Baskerville", "Times New Roman", serif;
+  color: var(--primary);
+  line-height: 1.3;
+  margin-bottom: 0.5rem;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+/* Párrafos y listas */
+p {
+  margin-bottom: 0.85rem;
+}
+
+ul {
+  margin-left: 1.25rem;
+  margin-bottom: 0.85rem;
+}
+
+li {
+  margin-bottom: 0.4rem;
+}
+
+/* Enlaces genéricos */
+a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+/* Header */
+header {
+  background: var(--primary);
+  color: #ffffff;
+  padding: 1rem 1.25rem;
+  text-align: center;
+  border-bottom: 4px solid var(--accent);
+}
+
+header h1 {
+  color: #ffffff;
+}
+
+/* Main */
+main {
+  max-width: 900px;
+  margin: 1.5rem auto 2.5rem;
+  padding: 0 1.25rem;
+}
+
+/* Secciones del siteplan */
+main>section {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  padding: 1.1rem 1.25rem;
+  margin-bottom: 1.5rem;
+  /* además del inline style que ya tienes */
+}
+
+/* Figuras de wireframes */
+figure {
+  margin: 1rem 0;
+  text-align: center;
+}
+
+figure img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border);
+  display: block;
+  margin: 0 auto 0.5rem;
+}
+
+figcaption {
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+/* Footer */
+footer {
+  background: var(--primary);
+  color: #ffffff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+
+footer p {
+  margin: 0;
+}
