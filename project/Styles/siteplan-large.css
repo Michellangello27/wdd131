@@ -1,6 +1,4 @@
 @media (min-width: 720px) {
-
-  /* Header más “siteplan profesional” en desktop */
   header {
     text-align: left;
     padding: 1.25rem 2rem;
@@ -10,24 +8,20 @@
     font-size: 2.4rem;
   }
 
-  /* Main más ancho y con más aire lateral */
   main {
     max-width: 1000px;
     padding: 0 2rem 2.5rem;
   }
 
-  /* Secciones con un poco más de separación */
   main>section {
     padding: 1.5rem 1.75rem;
     margin-bottom: 2rem;
   }
 
-  /* Wireframes: figuras centradas y un poco más pequeñas en ancho */
   figure img {
     max-width: 80%;
   }
 
-  /* Footer ligeramente más compacto en desktop */
   footer {
     font-size: 0.85rem;
     padding: 0.85rem 2rem;
