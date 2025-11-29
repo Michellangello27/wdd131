@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Thanks for your review</title>
+    <meta name="description" content="WDD131 - Product Review Form">
+    <meta name="author" content="Miguel Ángel Cornejo Durand">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&family=Inter:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/form-base.css">
+    <link rel="stylesheet" href="styles/form-large.css">
+
+    <script src="scripts/review.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <h1>Thank you!</h1>
+        <p class="subtitle">Your review was submitted successfully.</p>
+    </header>
+
+    <main class="center-page">
+        <section class="card" id="thanks">
+            <h2 class="sr-only">Submission summary</h2>
+            <p id="summary"></p>
+            <p class="counter">
+                Total reviews submitted from this browser:
+                <strong id="count">0</strong>
+            </p>
+
+            <a class="cta linklike" href="form.html">← Write another review</a>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <p>&copy; <span id="year"></span> • Miguel Ángel Cornejo D. • Cusco, Peru</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
