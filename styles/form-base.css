@@ -26,9 +26,14 @@ body {
     color: var(--ink);
     background: linear-gradient(180deg, #e6f3f7 0%, var(--bg) 140%);
     min-height: 100vh;
-    min-height: 100svh;
     display: flex;
     flex-direction: column;
+}
+
+@supports (min-height: 100svh) {
+    body {
+        min-height: 100svh;
+    }
 }
 
 .site-header {
