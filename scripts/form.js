@@ -1,3 +1,15 @@
+// Footer: año actual y última modificación
+const yearEl = document.querySelector("#year");
+if (yearEl) {
+  yearEl.textContent = new Date().getFullYear();
+}
+
+const lastModEl = document.querySelector("#lastModified");
+if (lastModEl) {
+  lastModEl.textContent = `Last modification: ${document.lastModified}`;
+}
+
+// Lista de productos
 const products = [
   {
     id: "fc-1888",
@@ -26,18 +38,19 @@ const products = [
   }
 ];
 
+// Rellenar dinámicamente el <select> de productos
 const productSelect = document.querySelector("#product");
 
 if (productSelect) {
-  products.forEach(product => {
+  products.forEach((product) => {
     const opt = document.createElement("option");
-    opt.value = product.id;     // value = id 
-    opt.textContent = product.name; // texto = name
+    opt.value = product.id;          // value = id
+    opt.textContent = product.name;  // texto visible = name
     productSelect.appendChild(opt);
   });
 }
 
-// Guardar timestamp de envío en campo hidden
+// Guardar timestamp de envío en el campo hidden
 const form = document.querySelector("#reviewForm");
 const hiddenTime = document.querySelector("#submittedAt");
 
