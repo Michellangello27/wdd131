@@ -1,29 +1,19 @@
 :root {
-  /* Paleta Peruvian Handicrafts Guide */
   --bg: #FFFDF7;
-  /* Warm Ivory – fondo general */
   --text: #1F2933;
-  /* Dark Gray – texto principal */
   --primary: #234E52;
-  /* Deep Teal Green – encabezados, header, footer */
   --accent: #C05621;
-  /* Burnt Orange – acentos, enlaces */
   --accent-soft: #F6AD55;
-  /* Soft Orange – resaltados suaves */
   --card: #FFFFFF;
-  /* Tarjeta/base de secciones */
   --border: #E2E8F0;
-  /* Borde suave */
 }
 
-/* Reset básico */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body */
 body {
   font-family: "Open Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-size: 1rem;
@@ -33,7 +23,6 @@ body {
   background: var(--bg);
 }
 
-/* Encabezados */
 h1,
 h2,
 h3 {
@@ -54,7 +43,6 @@ h2 {
   margin-bottom: 0.75rem;
 }
 
-/* Párrafos y listas */
 p {
   margin-bottom: 0.85rem;
 }
@@ -68,7 +56,6 @@ li {
   margin-bottom: 0.4rem;
 }
 
-/* Enlaces genéricos */
 a {
   color: var(--accent);
   text-decoration: none;
@@ -80,7 +67,6 @@ a:focus {
   text-decoration: underline;
 }
 
-/* Header */
 header {
   background: var(--primary);
   color: #ffffff;
@@ -93,24 +79,20 @@ header h1 {
   color: #ffffff;
 }
 
-/* Main */
 main {
   max-width: 900px;
   margin: 1.5rem auto 2.5rem;
   padding: 0 1.25rem;
 }
 
-/* Secciones del siteplan */
 main>section {
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: 0.75rem;
   padding: 1.1rem 1.25rem;
-  margin-bottom: 1.5rem;
-  /* además del inline style que ya tienes */
+  margin-bottom: 2rem;
 }
 
-/* Figuras de wireframes */
 figure {
   margin: 1rem 0;
   text-align: center;
@@ -130,7 +112,6 @@ figcaption {
   color: #4b5563;
 }
 
-/* Footer */
 footer {
   background: var(--primary);
   color: #ffffff;
