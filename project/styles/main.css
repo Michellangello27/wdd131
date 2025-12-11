@@ -267,10 +267,11 @@ a:focus-visible {
 
 .hero-content {
     position: relative;
-    padding: 2.5rem 0 2.75rem;
-    margin-top: -8rem;
+    padding: 3rem 0 3rem;
+    margin-top: -5rem;
     z-index: 1;
 }
+
 
 .hero-content h1 {
     color: #fff;
@@ -593,6 +594,12 @@ a:focus-visible {
 .benefit-image img {
     border-radius: 0.6rem;
     border: 1px solid var(--border);
+    transition: transform 0.35s ease;
+}
+
+.benefit-card:hover .benefit-image img,
+.benefit-card:focus-within .benefit-image img {
+    transform: translateY(-4px) scale(1.03);
 }
 
 .contact-page {
