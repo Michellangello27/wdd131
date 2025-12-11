@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | Peruvian Handicrafts Guide</title>
+    <meta name="description"
+        content="Contact Peruvian Handicrafts Guide to ask questions, request information about artisans, or explore collaboration opportunities.">
+    <meta name="author" content="Miguel Ángel Cornejo Durand">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Open+Sans:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/main-large.css" />
+
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/contact.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="wrap header-inner">
+            <a class="logo-area" href="index.html">
+                <img src="images/logo-hpg.png" class="site-logo" loading="lazy" decoding="async" width="128"
+                    height="128" alt="Peruvian Handicrafts Guide logo">
+                <div class="logo-text">
+                    <span class="tagline">Peruvian Handicrafts</span>
+                    <span class="site-title">Peruvian Handicrafts Guide</span>
+                </div>
+            </a>
+
+            <button class="nav-toggle" aria-label="Open navigation">
+                <span></span><span></span><span></span>
+            </button>
+
+            <nav class="site-nav">
+                <a href="index.html">Home</a>
+                <a href="techniques.html">Techniques</a>
+                <a href="history.html">History</a>
+                <a href="benefits.html">Benefits</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="contact.html" class="active">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero hero--inner">
+        <picture>
+            <img src="images/hero-contact.webp" 
+            alt="Artisans and visitors in a handicraft workshop"
+            loading="eager"
+            decoding="async"
+            width="1600"
+            height="600">
+        </picture>
+
+        <div class="wrap hero-content">
+            <h1>Get in <span>Touch</span></h1>
+            <p>
+                Do you want to learn more about Peruvian handicrafts, artisans or possible collaborations?
+                Send us a message and we will be happy to help.
+            </p>
+        </div>
+    </section>
+
+    <section class="wrap tech-intro">
+        <p>
+            Use this form to ask questions about techniques, regions, artisan communities, educational projects
+            or responsible tourism experiences related to Peruvian handicrafts.
+        </p>
+    </section>
+
+    <main class="wrap contact-page">
+        <div class="contact-layout">
+
+            <section aria-labelledby="contact-title">
+                <h2 id="contact-title" class="section-title">Contact form</h2>
+
+                <form id="contactForm" class="contact-form" novalidate>
+                    <fieldset>
+                        <legend>Contact information</legend>
+
+                        <label for="name">
+                            Name
+                            <input id="name" name="name" type="text" autocomplete="name" required>
+                        </label>
+
+                        <label for="email">
+                            Email
+                            <input id="email" name="email" type="email" autocomplete="email" required>
+                        </label>
+
+                        <label for="country">
+                            Country / region (optional)
+                            <input id="country" name="country" type="text" autocomplete="country-name">
+                        </label>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Your interest</legend>
+
+                        <label for="interest">
+                            What are you interested in?
+                            <select id="interest" name="interest">
+                                <option value="">Choose an option…</option>
+                                <option value="wholesale">Wholesale or bulk orders</option>
+                                <option value="custom">Custom or commissioned pieces</option>
+                                <option value="workshops">Workshops and demonstrations</option>
+                                <option value="tourism">Responsible tourism experiences</option>
+                                <option value="general">General question about handicrafts</option>
+                            </select>
+                        </label>
+
+                        <label for="message">
+                            Message
+                            <textarea id="message" name="message" rows="5"
+                                placeholder="Tell us what you are looking for or how we can help…" required></textarea>
+                        </label>
+
+                        <label class="contact-checkbox">
+                            <input type="checkbox" id="newsletter" name="newsletter" value="yes">
+                            I would like to receive occasional updates about Peruvian handicrafts.
+                        </label>
+                    </fieldset>
+
+                    <button class="btn btn-primary" type="submit">Send message</button>
+                    <p id="formMsg" class="form-result" aria-live="polite"></p>
+                </form>
+            </section>
+
+            <aside class="contact-info" aria-label="Additional contact information">
+                <h2>How we can help</h2>
+                <p>
+                    We can share information about artisan communities, techniques, regions and examples of
+                    high-quality Peruvian handicrafts for educational, cultural or tourism projects.
+                </p>
+                <p>
+                    If you are an artisan, organization or educator, you can also use this form to explore
+                    collaborations, workshops or content for exhibitions and events.
+                </p>
+
+                <h3>Typical questions</h3>
+                <ul class="contact-list">
+                    <li>How to identify authentic Peruvian handicrafts.</li>
+                    <li>Ideas for cultural workshops or school projects.</li>
+                    <li>Guidance about regions and traditional techniques.</li>
+                    <li>Suggestions for responsible tourism experiences.</li>
+                </ul>
+
+                <p class="contact-email-note">
+                    For formal proposals you may also write to:
+                    <strong>info@peruvianhandicraftsguide.test</strong>
+                </p>
+            </aside>
+
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap footer-inner">
+            <small>© <span id="year"></span> Peruvian Handicrafts Guide · Perú · by MACD <a
+                    href="references.html">References</a></small>
+            <p><small id="lastModified"></small></p>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>

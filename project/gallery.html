@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery – Peruvian Handicrafts Guide</title>
+
+    <meta name="description"
+        content="Explore a curated gallery of Peruvian handicraft pieces, filterable by category, region, and price." />
+    <meta name="author" content="Miguel Ángel Cornejo Durand" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Open+Sans:wght@300;400;600;700&display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/main-large.css" />
+
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/gallery.js" defer></script>
+</head>
+
+<body id="top">
+    <header class="site-header">
+        <div class="wrap header-inner">
+            <a href="index.html" class="logo-area">
+                <img src="images/logo-hpg.png" alt="Handicraft Peruvian Guide logo" loading="lazy" decoding="async"
+                    class="site-logo" width="128" height="128" />
+                <div class="logo-text">
+                    <span class="tagline">PERUVIAN HANDICRAFTS</span>
+                    <span class="site-title">Guide to Peruvian handicrafts</span>
+                </div>
+            </a>
+
+            <button class="nav-toggle" aria-label="Open main navigation" aria-controls="main-nav" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+
+            <nav class="site-nav" id="main-nav" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="techniques.html">Techniques</a>
+                <a href="history.html">History</a>
+                <a href="benefits.html">Benefits</a>
+                <a href="gallery.html" class="active">Gallery</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero hero--inner">
+            <picture>
+                <source srcset="images/hero-gallery.webp" type="image/webp" />
+                <img src="images/hero-gallery.webp" alt="Display of diverse Peruvian handicraft pieces" width="1600"
+                    height="900" loading="eager" />
+            </picture>
+
+            <div class="hero-content wrap">
+                <h1>Explore unique <span>Peruvian craft pieces</span></h1>
+                <p>
+                    Filter the gallery by craft type, region, and price to discover handmade pieces that reflect Peru’s
+                    cultural diversity.
+                </p>
+            </div>
+        </section>
+
+        <section class="gallery-filters wrap">
+            <h2 class="section-title">Filter the gallery</h2>
+
+            <form id="filters-form" class="filters" novalidate>
+                <div class="filter-group">
+                    <label for="filter-category">Craft type</label>
+                    <select id="filter-category" name="category">
+                        <option value="any">Any</option>
+                        <option value="Ceramics">Ceramics</option>
+                        <option value="Textiles">Textiles</option>
+                        <option value="Wood carving">Wood carving</option>
+                        <option value="Silver filigree">Silver filigree</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="filter-region">Region</label>
+                    <select id="filter-region" name="region">
+                        <option value="any">Any</option>
+                        <option value="Amazonas">Amazonas</option>
+                        <option value="Ancash">Ancash</option>
+                        <option value="Apurímac">Apurímac</option>
+                        <option value="Arequipa">Arequipa</option>
+                        <option value="Ayacucho">Ayacucho</option>
+                        <option value="Cajamarca">Cajamarca</option>
+                        <option value="Cusco">Cusco</option>
+                        <option value="Huancavelica">Huancavelica</option>
+                        <option value="Huánuco">Huánuco</option>
+                        <option value="Ica">Ica</option>
+                        <option value="Junín">Junín</option>
+                        <option value="Lambayeque">Lambayeque</option>
+                        <option value="Lima">Lima</option>
+                        <option value="Piura">Piura</option>
+                        <option value="Puno">Puno</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="filter-price">Price range</label>
+                    <select id="filter-price" name="priceRange">
+                        <option value="any">Any</option>
+                        <option value="low">$ – Budget (up to 60)</option>
+                        <option value="medium">$$ – Standard (61–120)</option>
+                        <option value="high">$$$ – Premium (121+)</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="sort-by">Sort by</label>
+                    <select id="sort-by" name="sort">
+                        <option value="name-asc">Name A–Z</option>
+                        <option value="name-desc">Name Z–A</option>
+                        <option value="price-asc">Price ↑</option>
+                        <option value="price-desc">Price ↓</option>
+                    </select>
+                </div>
+
+                <div class="filter-group filter-group--inline">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="only-favorites" name="onlyFavorites" />
+                        Show only favorites
+                    </label>
+
+                    <button type="button" id="clear-filters" class="btn btn-secondary">
+                        Clear
+                    </button>
+                </div>
+            </form>
+        </section>
+
+        <section class="gallery-results wrap" aria-live="polite">
+            <h2 class="section-title">Gallery results</h2>
+            <div id="crafts-list" class="cards gallery-cards"></div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap footer-inner">
+            <small>© <span id="year"></span> Peruvian Handicrafts Guide · Perú · by MACD <a
+                    href="references.html">References</a></small>
+            <p><small id="lastModified"></small></p>
+        </div>
+    </footer>
+</body>
+
+</html>

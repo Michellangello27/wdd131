@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Peruvian Handicrafts Guide - Home</title>
+  <meta name="description"
+    content="Discover the main forms of traditional Peruvian handicrafts: ceramics, textiles, wood carving, and silver filigree.">
+  <meta name="author" content="Miguel Ángel Cornejo Durand">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Open+Sans:wght@300;400;600;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/main-large.css">
+
+  <script src="scripts/main.js" defer></script>
+</head>
+
+<body id="top">
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a href="index.html" class="logo-area">
+        <img src="images/logo-hpg.png" loading="lazy" decoding="async" width="128" height="128"
+          alt="Handicraft Peruvian Guide - logo" class="site-logo">
+        <div class="logo-text">
+          <span class="tagline">PERUVIAN HANDICRAFTS</span>
+          <span class="site-title">Guide to Peruvian handicrafts</span>
+        </div>
+      </a>
+
+      <button class="nav-toggle" aria-label="Open main navigation" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="site-nav" id="main-nav" aria-label="Main navigation">
+        <a href="index.html" class="active">Home</a>
+        <a href="techniques.html">Techniques</a>
+        <a href="history.html">History</a>
+        <a href="benefits.html">Benefits</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <picture>
+        <source srcset="images/hero-desktop.webp" type="image/webp">
+        <img src="images/hero-desktop.webp"
+          alt="Peruvian artisans working with ceramics, textiles, wood carving and silver filigree" loading="eager"
+          width="1200" height="600">
+      </picture>
+      <div class="hero-content wrap">
+        <h1>Explore the soul of <span>Peruvian handicrafts</span></h1>
+        <p>Learn about the techniques, stories, and cultural meaning behind ceramics, textiles, wood carvings, and
+          silver filigree.</p>
+        <a class="btn btn-primary" href="techniques.html">Discover the techniques</a>
+      </div>
+    </section>
+
+    <section class="craft-grid wrap" aria-labelledby="crafts-title">
+      <h2 id="crafts-title" class="section-title">Main Peruvian handicrafts</h2>
+
+      <div class="cards">
+        <article class="card">
+          <figure class="card-figure">
+            <img src="images/card-ceramics.webp" alt="Colorful Peruvian ceramic bowls and vases" loading="lazy"
+              width="600" height="450">
+          </figure>
+          <div class="card-body">
+            <h3 class="card-title">Ceramics</h3>
+            <p>From Nazca symbols to contemporary pieces, discover how clay is shaped into cultural stories.</p>
+            <a href="techniques.html#ceramics" class="btn btn-secondary">Learn more</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <figure class="card-figure">
+            <img src="images/card-textils.webp" alt="Traditional Peruvian textiles with bright geometric patterns"
+              loading="lazy" width="600" height="450">
+          </figure>
+          <div class="card-body">
+            <h3 class="card-title">Textiles</h3>
+            <p>Traditional weaving, natural dyes, and patterns that preserve Andean cosmovision in every thread.</p>
+            <a href="techniques.html#textiles" class="btn btn-secondary">Learn more</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <figure class="card-figure">
+            <img src="images/card-woodcarving.webp" alt="Carved wooden Peruvian figures and decorative panels"
+              loading="lazy" width="600" height="450">
+          </figure>
+          <div class="card-body">
+            <h3 class="card-title">Wood carving</h3>
+            <p>Religious images, masks, and decorative pieces carved with ancestral techniques and modern creativity.
+            </p>
+            <a href="techniques.html#wood" class="btn btn-secondary">Learn more</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <figure class="card-figure">
+            <img src="images/card-silverfiligree.webp" alt="Silver filigree jewelry inspired by Peruvian designs"
+              loading="lazy" width="600" height="450">
+          </figure>
+          <div class="card-body">
+            <h3 class="card-title">Silver filigree</h3>
+            <p>Delicate silver threads turned into jewelry and ornaments that highlight Peruvian artisanship.</p>
+            <a href="techniques.html#filigree" class="btn btn-secondary">Learn more</a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <small>© <span id="year"></span> Peruvian Handicrafts Guide · Perú · by MACD <a
+          href="references.html">References</a></small>
+      <p><small id="lastModified"></small></p>
+    </div>
+  </footer>
+</body>
+
+</html>
