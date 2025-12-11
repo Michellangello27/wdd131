@@ -282,8 +282,11 @@ a:focus-visible {
 }
 
 .hero-content p {
-    color: #e2e8f0;
+    color: #E2E8F0;
     max-width: 38rem;
+    background-color: rgba(15, 23, 42, 0.8);
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
 }
 
 .tech-intro {
